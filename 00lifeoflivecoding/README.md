@@ -3,14 +3,17 @@
 ## DTR: Live Coding
 - Live coding is a performance approach where a creative coder demonstrably writes and rewrites art-making protocols in real-time
   - Audio - Visual Digital media (mostly)
-  - Dance, Poetry, Lighting design (more and more)
+  - [Dance](https://vimeo.com/916916243), Poetry, Lighting design (more and more)
 - With <3 to controllerism, this is not controllerism
   - When we re-write the rules, we change their fundamental character, not just their behavior
     - Like adapting a recipe with different ingredients vs adjusting serving size
   - If controller and sound source are divorced, how the rules are being re-written in real-time is obscured
   - Chaos reigns, not control!
 
-## [Where we're coming from?](https://acousmata.com/post/893801464/martian-folk-music)
+## Where we're coming from?
+- [The Hub](https://acousmata.com/post/893801464/martian-folk-music)
+- [George Lewis](https://brahms.ircam.fr/en/media/xd2cc9d)
+- [Laurie Spiegel](https://teropa.info/musicmouse/)
 
 ## Ethos
 - Luthier/developer/backend, performer/musician/frontend roles blurred/blended = Distributed Agency
