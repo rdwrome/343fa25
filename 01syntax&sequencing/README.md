@@ -2,124 +2,63 @@
 
 ### Reading?
 
-## Strudel is a javaScript wrapper for [TidalCycles](https://tidalcycles.org/) and Hydra
-- [Everything is pattern-based](https://tidalcycles.org/docs/reference/cycles)
-	- can be unexpected from a conductor's perspective...
-- Uses javaScript in the browser (so you don't have to download anything!)
-- TidalCycles is a Haskell wrapper for SuperCollider, FYI
-
 ## [Strudel](https://strudel.cc/)
-- delete welcome shuffle patch!
-- play
-- update
 
-## mini-tidal starter pattern commands and syntax
-`s` = sound
+## [Syntax](https://strudel.cc/learn/code/#functions-arguments-and-chaining)
 
-`" "` = what to fit inside one cycle
+## [Cycles](https://strudel.cc/understand/cycles/)
 
-`~` = silence
+## [Drum Machine Sequencing](https://strudel.cc/workshop/first-sounds/)
 
-`!` = repeat
+### Small assignment for next week! A mini-tidal percussion patch (only using `bd hh ho sn cp rim`) in Strudel you're proud of.
+All in a single markdown file
 
-**starter examples**
-
-`s ("bd")`
-
-`s ("bd hh")`
-
-`s ("bd ~ hh")`
-
-`s ("bd ~ hh!2")`
-
-**everybody now!**
-
-## Strudel
-- console
-- reference
-- sounds
-- (but we'll use `bd hh ho sn cp rim` for now!)
-
-## more advanced mini-tidal commands and syntax
-
-`?` = randomly silence
-
-`[]` = nest these within one pulse of the cycle
-
-`[ | ]` = randomly choose sample from this array per cycle
-
-`"< >"` = chose the next one from this list per cycle
-
-`,` = layer these atop one another within one cycle
-
-**more examples**
-
-`s ("hh!16?")`
-
-`s "(bd ~ [hh!2]")`
-
-`s ("[bd | hh | sd]!4")`
-
-`s ("<bd hh sd>!4")`
-
-`s ("bd, ~ hh")`
-
-**everybody now!**
-
-## share a percussion patch
-
-## stacks
-- you gotta watch for what the sound source is
-
-`stack(
-  "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
-  "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
-  "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
-  "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] ",
-).s()`
-
-## time
-
-- cps
-
-`s("<bd sd>,hh*2").cpm(140/4)`
-
-- fast
-
-`s("bd hh sd hh").fast(sine) `
-
-- slow
-
-`s("bd hh sd hh").slow(2) `
-
-
-### mini-tidal notation comparison
+### Good people, do we remember markdown?
 ```
-// tidal cycles
-d1 $ stack[
-  s "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
-  s "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
-  s "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
-  s "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] "
-]
+/* man in finance @by v10101a 
++ "das ist bass" @by enelg,froos
+*/
 
-// estuary
-stack[
-  s "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
-  s "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
-  s "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
-  s "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] "
-]
+samples({
+  finance:  ['man-in-finance/finance_00.wav', 'man-in-finance/finance_01.wav', 'man-in-finance/finance_02.wav', 'man-in-finance/murrayhill.wav']
+}, 'github:sandpills/v10101a-samples/main/');
 
-// strudel
-stack(
-  "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
-  "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
-  "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
-  "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] ",
-).s()
 
+$: n("<1 0>").s("finance").slow(2).clip(1)
+  .mask("<1 1 1 0>/4")
+  ._punchcard()
+
+$: n("0").s("finance").slow(2).clip(1.4)
+  .struct("1(<3 5>,8)")
+  .mask("<0 0 0 1>/4").gain(0.8).room(1.2)
+  ._punchcard()
+
+$: note("<a1 c2>/2")
+.sound("supersaw")
+.euclidLegato(9,16)
+.ftype('24db')
+.lpf(tri.rangex(2000,400).slow(8))
+.lpenv(6)
+.dist("2:.4")
+.echo(2, 1/16, .7)
+.mul(gain("[.5 1!3]*4")) //side chain
+.add(note("<[0 5]*4 [5 10]*4>"))
+._pianoroll()
+// .hush()
+
+$: s("oh*16")
+  .bank("RolandTR909")
+  .decay(sine.range(.2,.4))
+  .dist("1:.3")
+  .mul(gain("[<0!3 1> .2 1 <0!3 .2>]*4")) //groove
+  .mul(gain("[.2 1!3]*4")) //side chain
+  .pan(tri.range(.7,.3))
+  .hpf(800)
+  .room(.1)
+  .mask("<0 1>/8")
+ ._punchcard()
+  // .hush()
+
+$: s("bd*4").bank('RolandTR909').dist("1:1")
+.scope()
 ```
-
-## Small assignment for next week! A mini-tidal percussion patch in Strudel you're proud of.
-All in a single markdown file (MD demo)

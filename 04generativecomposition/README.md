@@ -1,94 +1,113 @@
-### Accessibility
-- Let your musicians see the screen
-- Don't give someone a seizure
+## [Signal Modifiers](https://strudel.cc/learn/signals/)
 
-# [minitidal + hydra in strudel](https://strudel.cc/learn/hydra/)
+## ["Random" Modifiers](https://strudel.cc/learn/random-modifiers/)
 
-# [video synth basics](https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/)
-# [functions](https://hydra.ojack.xyz/functions)
+## [Conditional Modifiers](https://strudel.cc/learn/conditional-modifiers/)
 
-## sources
-	- noise
-	- voronoi
-	- osc
-	- shape
-	- gradient
-	- src
-	- solid
-	
-## geometry
-	- rotate
-	- scale
-	- pixelate
-	- repeat
-	- repeatX
-	- repeatY
-	- kaleid
-	- scroll
-	- scrollX
-	- scrollY
-	
-## color
-	- posterize
-	- shift
-	- invert
-	- contrast
-	- brightness
-	- luma
-	- thresh
-	- color
-	- saturate
-	- hue
-	- colorama
-	- sum
-	- rgba
+## [Accumulation](https://strudel.cc/learn/accumulation/)
 
-## eternal sources
-	- initCam
-	- initImage
-	- initVideo
-	- init
-	- initStream
-	- initScreen
-	
-## blend
-	- add
-	- sub
-	- layer
-	- blend
-	- mult
-	- diff
-	
-## modulate
-	- modulateRepeat
-	- modulateRepeatX
-	- modulateRepeatY
-	- modulateKaleid
-	- modulateScrollX
-	- modulateScrollY
-	- modulate
-	- modulateScale
-	- modulatePixelate
-	- modulateRotate
-	- modulateHue
-	
-## synth settings
-	- render
-	- update
-	- setResolution
-	- hush
-	- setFunction
-	- speed
-	- bpm
-	- width
-	- height
-	- time
-	- mouse
+## [Pitch Functions](https://strudel.cc/learn/tonal/)
 
-# [Examples](https://hydra.ojack.xyz)
-- roll through examples
-- change parameters
-- show and tell
-- code reuse!
+## ["Experimental Step-wise Patterning"](https://strudel.cc/learn/stepwise/)
 
-## [so you don't want to show your code...](https://www.youtube.com/watch?v=b9VS7Q86T-Y&list=PL82ekYXUXbcSDipIPs6Df1YpG6s68WJRu&index=13&t=2s)
+## livecoding evaluation!
+`
+_$: n("[0 .. 8]*8/9").scale("C:minor:pentatonic")
+
+// command-/
+//$: s("bd*4").bank('RolandTR909')
+
+.hush()
+`
+`
+// "Polish cow song" @by Rogolop
+// "Gdzie jest biały węgorz ? (Zejście)" by Cypis
+// Abridged
+
+setcpm(120)
+// DRUMS
+$: sound("<bd sd>").bank("RolandTR909").gain("0.3")
+// VIOLIN
+$: n(`< -!16
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2 
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+[7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
+>`).scale("A:minor").transpose("<[8P 0]>").sound("gm_violin:6").room(0.5).gain("3")
+.velocity(`< .9 .7 .4 .2    .9 .7 .4 .2    .9 .7 .4 .2    .2 .2 .2 .2 >`)
+// BASS
+$: n(`< -!15 [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
+>`).scale("A:minor").transpose("<-15P>").sound("gm_fretless_bass").decay(0.3).room(0.2).gain("3")
+// INTRO
+$: n(`<
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+-!32
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+-!32
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+-!32
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+>`).scale("A:minor").sound("gm_accordion:1").decay(0.5).room(0.3).gain("3").pan("0.4")
+// CHORUS
+$: n(`< -!31 [4 4]
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+-!31 [4 4]
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+-!31 [4 4]
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+-!31 [4 4]
+[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
+[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
+>`).scale("A:minor").transpose("-8P").sound("gm_bassoon:0").decay(0.5).room(0.3).gain("3").pan(0.6)
+// VERSE
+$: n(`< -!32 -!32
+[6 6] [[6 4] -] [[6 6] 6] [6 4]    [6 6] [6 6] [6# 6] [5 4]    [6 6#] [4 -] [6 6] [6# 4]    [- 6] [6 6] [7 6] [5 4]
+[6 6]!4    [6 6] [[6 7] -] [7 6] [7 4]    [- 6] - [6 6] [7 4]    [- 9] [8 7] [6 6] [7 4]
+-!32
+[6 6] [[6 4] -] [[6 6] 6] [6 4]    [6 6] [6 6] [6# 6] [5 4]    [6 6#] [4 -] [6 6] [6# 4]    [- 6] [6 6] [7 6] [5 4]
+[6 6]!4    [6 6] [[6 7] -] [7 6] [7 4]    [- 6] - [6 6] [7 4]    [- 9] [8 7] [6 6] [7 4]
+-!32
+[6 6] [[6 4] -] [[6 6] 6] [6 4]    [6 6] [6 6] [6# 6] [5 4]    [6 6#] [4 -] [6 6] [6# 4]    [- 6] [6 6] [7 6] [5 4]
+[6 6]!4    [6 6] [[6 7] -] [7 6] [7 4]    [- 6] - [6 6] [7 4]    [- 9] [8 7] [6 6] [7 4]
+-!32
+>`).scale("A:minor").transpose("-8P").sound("gm_synth_bass_2:0").room(0.3)
+  .gain("2.5").pan(0.5)
+`
+## live code a community pattern!
+
+### Small assignment for next week! 2 min mini-tidal in Strudel LIVECODE SET! DOCUMENTATION FILE (DUE IN ADVANCE) OF YOUR PLANS.
