@@ -17,7 +17,8 @@ All in a single markdown file
 
 ### Good people, do we remember markdown?
 
-`
+```javascript
+
 /* man in finance @by v10101a 
 + "das ist bass" @by enelg,froos
 */
@@ -64,9 +65,8 @@ $: s("oh*16")
 
 $: s("bd*4").bank('RolandTR909').dist("1:1")
 .scope()
-`
 
-`
+
 // @title dash on the train @by todepond
 
 $: note("[C G], <D Fb B C A>*[0.5,2]")
@@ -86,9 +86,8 @@ $: note("[C G], <D Fb B C A>*[0.5,2]")
 
   
 .slow(".1275").gain(.8)
-`
 
-`
+
 // "Polish cow song" @by Rogolop
 // "Gdzie jest biały węgorz ? (Zejście)" by Cypis
 // Abridged
@@ -176,9 +175,9 @@ $: n(`< -!32 -!32
 -!32
 >`).scale("A:minor").transpose("-8P").sound("gm_synth_bass_2:0").room(0.3)
   .gain("2.5").pan(0.5)
-`
 
-`
+
+
 const seed = slider(12,0,12,1)
 
 // samples('github:tidalcycles/dirt-samples');
@@ -224,4 +223,5 @@ $: note ("c4 c4 b3 ~")
   .shape("[0|.2|.4]")
   .gain("2")
   .mask("<0 0 0 1>")._pianoroll()
-`
+	  
+```
