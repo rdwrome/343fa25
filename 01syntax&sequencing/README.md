@@ -1,21 +1,79 @@
-### catchup introductions
-
 ### Headphones?
 
 ### Reading?
 
-## [Strudel](https://strudel.cc/)
+## Strudel is a javaScript wrapper for mini-[TidalCycles](https://tidalcycles.org/) and Hydra
+- [Everything is pattern-based](https://tidalcycles.org/docs/reference/cycles)
+	- can be unexpected from a conductor's perspective...
+- Uses javaScript in the browser (so you don't have to download anything!)
+- TidalCycles is a Haskell wrapper for SuperCollider, FYI
 
-## [Syntax](https://strudel.cc/learn/code/#functions-arguments-and-chaining)
+## mini-tidal starter pattern commands and [syntax](https://strudel.cc/learn/code/#functions-arguments-and-chaining)
+- functions
+- parameters/arguments
+- chained functions
 
-## [Cycles](https://strudel.cc/understand/cycles/)
+`s` = sound
 
-## [Drum Machine Sequencing](https://strudel.cc/workshop/first-sounds/)
+`" "` = what to fit inside one cycle
 
-### Small assignment for next week! A mini-tidal percussion patch (only using `bd hh ho sn cp rim`) in Strudel you're proud of.
-All in a single markdown file
+`~` = silence
+
+`!` = repeat
+
+`\\` = comment
+
+**starter examples**
+
+`s ("bd")`
+
+`s ("bd hh")`
+
+`s ("bd ~ hh")`
+
+`s ("bd ~ hh!2")`
+
+**everybody now!**
+
+## [Strudel Tour](https://strudel.cc/)
+- console
+- reference
+- sounds
+- (but we'll use `bd hh ho sn cp rim` for now!)
+
+## more advanced mini-tidal commands and [cycles](https://strudel.cc/understand/cycles/)
+
+`?` = randomly silence
+
+`[]` = nest these within one pulse of the cycle
+
+`[ | ]` = randomly choose sample from this array per cycle
+
+`"< >"` = chose the next one from this list per cycle
+
+`,` = layer these atop one another within one cycle
+
+**more examples**
+
+`s ("hh!16?")`
+
+`s "(bd ~ [hh!2]")`
+
+`s ("[bd | hh | sd]!4")`
+
+`s ("<bd hh sd>!4")`
+
+`s ("bd, ~ hh")`
+
+**everybody now!**
+
+## [Sample Selection with Banks and CPM/BPM](https://strudel.cc/workshop/first-sounds/)
+
+### Small assignment for next week! A mini-tidal percussion patch (only using `bd hh ho sn cp rim`) you're proud of.
+- All in a single markdown file with the patch code embedded
 
 ### Good people, do we remember markdown?
+- how to format embedded code
 
 ```javascript
 
@@ -67,120 +125,13 @@ $: s("bd*4").bank('RolandTR909').dist("1:1")
 .scope()
 
 
-// @title dash on the train @by todepond
-
-$: note("[C G], <D Fb B C A>*[0.5,2]")
-  // .rev()
-  .sound("sawtooth").cpm(30).gain(.4)
-.lpf("<100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1300 1200 1100 1000 900 800 700 600 500 400 300 200>/4")
-  .room(1)
-  // .jux(pan)
-  .pan("<0 1>/2")  
-.delay(0.4)
-.roomsize("1")
-// .slow("1, .5, .25") // swap to this
-
-  // $: note("F")
-  //   .sound("piano").cpm(30)
-  //  .lpf(800)
-
-  
-.slow(".1275").gain(.8)
-
-
-// "Polish cow song" @by Rogolop
-// "Gdzie jest biały węgorz ? (Zejście)" by Cypis
-// Abridged
-
-setcpm(120)
-// DRUMS
-$: sound("<bd sd>").bank("RolandTR909").gain("0.3")
-// VIOLIN
-// $: n(`< -!16
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2 
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// [7 -]*2!4    [4 -]*2!4    [3 -]*2!4    [3 -]*2!2 -!2
-// >`).scale("A:minor").transpose("<[8P 0]>").sound("gm_violin:6").room(0.5).gain("3")
-// .velocity(`< .9 .7 .4 .2    .9 .7 .4 .2    .9 .7 .4 .2    .2 .2 .2 .2 >`)
-// BASS
-$: n(`< -!15 [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
-7 - - [- 2]    [4 4] [4 -] - [- -2]    [3 3] [3 3] - -    - - - [- 4]
->`).scale("A:minor").transpose("<-15P>").sound("gm_fretless_bass").decay(0.3).room(0.2).gain("3")
-// INTRO
-$: n(`<
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
--!32
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
--!32
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
--!32
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
->`).scale("A:minor").sound("gm_accordion:1").decay(0.5).room(0.3).gain("3").pan("0.4")
-// CHORUS
-$: n(`< -!31 [4 4]
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
--!31 [4 4]
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
--!31 [4 4]
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
--!31 [4 4]
-[7 7] [4 4] 2 [- 4]    [- 4] [4 -] [4 -] [- 3]    [- 3] [3 -] [3 -] [- 4]    [7 7] [4 4] 2 4
-[7 7] [4 4] 2 [2 2]    [4 4] [4 4] [- 4] [- 4]    [3 3] [3 3] [3 -] [- 4]    [7 7] [4 4] 2 4
->`).scale("A:minor").transpose("-8P").sound("gm_bassoon:0").decay(0.5).room(0.3).gain("3").pan(0.6)
-// VERSE
-$: n(`< -!32 -!32
-[6 6] [[6 4] -] [[6 6] 6] [6 4]    [6 6] [6 6] [6# 6] [5 4]    [6 6#] [4 -] [6 6] [6# 4]    [- 6] [6 6] [7 6] [5 4]
-[6 6]!4    [6 6] [[6 7] -] [7 6] [7 4]    [- 6] - [6 6] [7 4]    [- 9] [8 7] [6 6] [7 4]
--!32
-[6 6] [[6 4] -] [[6 6] 6] [6 4]    [6 6] [6 6] [6# 6] [5 4]    [6 6#] [4 -] [6 6] [6# 4]    [- 6] [6 6] [7 6] [5 4]
-[6 6]!4    [6 6] [[6 7] -] [7 6] [7 4]    [- 6] - [6 6] [7 4]    [- 9] [8 7] [6 6] [7 4]
--!32
-[6 6] [[6 4] -] [[6 6] 6] [6 4]    [6 6] [6 6] [6# 6] [5 4]    [6 6#] [4 -] [6 6] [6# 4]    [- 6] [6 6] [7 6] [5 4]
-[6 6]!4    [6 6] [[6 7] -] [7 6] [7 4]    [- 6] - [6 6] [7 4]    [- 9] [8 7] [6 6] [7 4]
--!32
->`).scale("A:minor").transpose("-8P").sound("gm_synth_bass_2:0").room(0.3)
-  .gain("2.5").pan(0.5)
-
+//livecoding for babies a la mehetabel
 
 
 const seed = slider(12,0,12,1)
 
 // samples('github:tidalcycles/dirt-samples');
+
 // $: n(irand(26)).struct("x")
 // .s("alphabet")
 // .room("[0|.2|.4]")
@@ -206,7 +157,7 @@ $: n ("25 1 2 3")
   .scale("c:major")
 ._pianoroll()
   
-$: note ("g3 a3 [c4 c4] [c4 [c4 c4][~ c4]]")ß
+$: note ("g3 a3 [c4 c4] [c4 [c4 c4][~ c4]]")
   .sound("gm_electric_bass_finger")
   .shape("[0|.2|.4]")
   .gain("2")
