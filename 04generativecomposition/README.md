@@ -110,4 +110,4 @@ $: n(`< -!32 -!32
 `
 ## live code a community pattern!
 
-### Small assignment for next week! 2 min mini-tidal in Strudel LIVECODE SET! DOCUMENTATION FILE (DUE IN ADVANCE) OF YOUR PLANS.
+### Small assignment for next week! Create a 2 min livecoding set using ONLY ONE SAMPLE. Documentation due as always.
