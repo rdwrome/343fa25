@@ -39,7 +39,7 @@
 - console
 - reference
 - sounds
-- (but we'll use `bd hh ho sn cp rim` for now!)
+- (but we'll use `bd hh ho sd cp rim` for now!)
 
 ## more advanced mini-tidal commands and [cycles](https://strudel.cc/understand/cycles/)
 
@@ -67,13 +67,17 @@
 
 **everybody now!**
 
-## [Sample Selection with Banks and CPM/BPM](https://strudel.cc/workshop/first-sounds/)
+## [Sample Selection with Banks](https://strudel.cc/workshop/first-sounds/)
 
-### Small assignment for next week! A mini-tidal percussion patch (only using `bd hh ho sn cp rim`) you're proud of.
-- All in a single markdown file with the patch code embedded
+## [CPM/BPM](https://strudel.cc/workshop/first-sounds/)
+
+### Small assignment for next week! Percussion Patch
+- Make a mini-tidal percussion patch (only using `bd hh ho sn cp rim`) you're proud of.
+- This week and ALWAYS! Document your work in a .md file as outlined in syllabus (what you did, how you did it, creative process, technical process, etc. Can be stream of consciousness but should more or less be in complete sentences).
+- Submit percussion patch and documentation in a single .md file (with the mini-tidal code embedded as below) and hand in via GitHub.com + Canvas as outlined in syllabus.
 
 ### Good people, do we remember markdown?
-- how to format embedded code
+- and how to format embedded code within it? Take a look at *this* .md file
 
 ```javascript
 
@@ -125,7 +129,7 @@ $: s("bd*4").bank('RolandTR909').dist("1:1")
 .scope()
 
 
-//livecoding for babies a la mehetabel
+//babyshark a la mehetabel
 
 
 const seed = slider(12,0,12,1)
@@ -148,7 +152,6 @@ $: n ("33 2 1 3 6 9")
   .ribbon(seed,1)
   .s("supersaw")
   .scale("f:major")._pianoroll()
-
 
 $: n ("25 1 2 3")
   //.degradeBy(0.1)

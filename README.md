@@ -36,18 +36,18 @@ Solo AV Final | 20%
   2. Commit all parts of your assignment (i.e. code+documentation file) into that subfolder
   3. Submit the link **to that folder** in the appropriate Canvas assignment by the deadline
 
-### Documentation File outline
-  - The documentation file (**always *in* MarkDown, saved as a .md file**) must have the following:
-    - what you did
-    - how you did it
-    - the problems you faced (ABDYDB: always be documenting your debugging!)
-    - how you overcame them
+### Documentation File outline 
+  - The documentation file (**always *in* MarkDown, saved as a .md file**) must have the following in mostly complete sentences!:
+    - what you did...
+    - how you did it...
+    - the problems you faced (ABDYDB: always be documenting your debugging!)...
+    - how you overcame them...
     - *what code you used from others/elsewhere*
       - where to find that code (specific links!!!)
       - other folks' public GitHub repositories, [Stack OverFlow](https://stackoverflow.com/), programming language forums are the best places to go for help most of the time
       - *do not* submit paywalled links
       - *if* you submit YouTube links (which is discouraged), they must have TIME STAMPS
-    - Correctly document all your debugging, especially if you code ultimately does not run as intended. I will take points off for code that does not run correctly, but will still give partial credit if it is well-documented.
+	- Correctly document all your debugging, especially if you code ultimately does not run as intended. I will take points off for code that does not run correctly, but will still give partial credit if it is well-documented.
     - For the purposes of this class, your documentation file also helps you prepare to talk about your code in class with your colleagues.
     - In general (unless I specify otherwise), it is permissible to use chat-GPT or other large-language models under the following circumstances:
       - You document the **ENTIRE INTERACTION** with screenshots and include images of those screen shots with your documentation.
