@@ -1,3 +1,5 @@
+## percussion patches!
+
 ## samples vs [synths](https://strudel.cc/learn/synths/)
 
 ### n vs note
