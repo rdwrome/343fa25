@@ -1,9 +1,79 @@
-## TODO RECORDING
+# recording your sessions
+## Virtual Audio Interfaces
+- [BlackHole](https://existential.audio/blackhole/)
+  - uncomplicated, unpowerful
+  - Download 16ch
+- JACK
+  - complicated, powerful
 
-## [sophisticated pattern transformations](https://strudel.cc/workshop/pattern-effects/)
+## miniTidalStrudel Audio > BlackHole > DAW or OBS
+- ORDER OF OPERATIONS CRITICAL!
+- **Audio MIDI Setup**
+  - [(Create Multi-Output Device)](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device)
+  - Input: BlackHole 16ch
+  - Output: Multi-Output Device
+    - BlackHole 16ch Use box checked!
+    - Your MONITOR source (external headphones, etc.) Use box checked!
+- **miniTidalStrudel**
+  - Settings
+  - Audio Output Device
+  - Select: BlackHole 16ch
+- **DAW**
+  - Input: BlackHole 16ch
+  - Output: Multi-Output Device	
+- **OBS**
+  - Main Window: Add Source to Scene
+    - Audio Input Capture
+      - BlackHole 16 ch
 
+## [obs 101](https://obsproject.com/)
+- scenes
+- sources
+- "audio"
+- streaming vs studio
 
-- fast, slow
+## [estuary](https://estuary.mcmaster.ca/)
+
+### mini-tidal notation comparison
+```
+// tidal cycles
+d1 $ stack[
+  s "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
+  s "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
+  s "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
+  s "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] "
+]
+
+// estuary
+stack[
+  s "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
+  s "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
+  s "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
+  s "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] "
+]
+
+// strudel
+stack(
+  "[bd ~ ~ bd] [~ ~ ~ bd] [~ bd bd ~] [~ ~ ~ ~] ",
+  "[~ ~ ~ ~] [sd ~ ~ ~] [~ ~ ~ ~] [sd ~ ~ ~] ",
+  "[hh ~ hh ~] [hh ~ hh ~] [hh ~ ~ ~] [hh ~ hh ~] ",
+  "[~ ~ ~ ~] [ho ~ ~ ~] [~ ~ ho ~] [~ ~ ~ ~] ",
+).s()
+
+```
+## sample transformations
+
+- loop at
+
+`samples({ rhodes: 'https://cdn.freesound.org/previews/132/132051_316502-lq.mp3' })
+s("rhodes").loopAt(2)`
+
+- begin
+
+`samples({ rave: 'rave/AREUREADY.wav' }, 'github:tidalcycles/dirt-samples')
+s("rave").begin("<0 .25 .5 .75>").fast(2)`
+
+## sophisticated pattern transformations
 
 - degradeBy
 
@@ -28,17 +98,12 @@
 - linger
 
 `s("lt ht mt cp, [hh oh]*2").linger("<1 .5 .25 .125>")`
-	
-### what are euclidean rhythms?
--- poly meter? poly rhythm?...euclidean rhythm?
--- https://www.youtube.com/watch?v=bKazVnHh2w4 (@1:55)
 
 - euclid
 
 `note("c3").euclid(3,8)`
 
-## [Yes, you may have your own samples & sampler effects](https://strudel.cc/learn/samples/#loading-custom-samples)
-
+### Small assignment for next week! Create a 2 min livecoding set using ONLY ONE SAMPLE. Documentation due as always.
 
 ## [Signal Modifiers](https://strudel.cc/learn/signals/)
 
@@ -52,4 +117,6 @@
 
 ## ["Experimental Step-wise Patterning"](https://strudel.cc/learn/stepwise/)
 
-### Small assignment for next week! Create a 2 min livecoding set using ONLY ONE SAMPLE. Documentation due as always.
+## [Yes, you may have your own samples & sampler effects](https://strudel.cc/learn/samples/#loading-custom-samples)
+
+

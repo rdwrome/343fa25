@@ -34,19 +34,21 @@
 - Improviser (hornist with sf nowave, sludge bands after conservatory)
 - Came to technology through an interest information accessibility (adult literacy tutor, public and corrections librarian)
 - <3 for Network Music and its anti-hierarchical structures
-- mind blown by early [PLORK](http://plork.deptcpanel.princeton.edu/listen/NYC/), late [The HUB](http://crossfade.walkerart.org/brownbischoff/) concerts
+- mind blown by the last [The HUB](http://crossfade.walkerart.org/brownbischoff/) concerts
 - Affords criticality of our relationship to digital capitalism
 - Started SuperColliding in 2011, making noise to improvise against on my horn
 - Moved Paris in 2015 without my horn, Laptop became my primary instrument
 - Joined UK-based offal [orchestra for femmes and laptops] in 2016
 - Started teaching livecoding here in 2021
+	- natalie, jame, jade 2022
+- livecode.boston started in 2024
 
 ## Who are you?
 
 ## What do you know about Live Coding? Why are you here?
 
 ## What are we going to do here and how are we going to do it?
-- Big Picture (audio then visual)
+- Big Picture (audio then visual, then both)
 - Nitty Gritty (the syllabus)
 
 ## [Where we're going to?](https://www.youtube.com/watch?v=qZ8xDEMLj7c&t=5s)

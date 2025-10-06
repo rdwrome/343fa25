@@ -98,6 +98,44 @@ __$: note("F")
   
 .slow(".1275").gain(.8)`
 
+
+## [sophisticated pattern transformations](https://strudel.cc/workshop/pattern-effects/)
+
+
+- fast, slow
+
+- degradeBy
+
+`s("hh*8").degradeBy(0.2)`
+
+- struct
+
+`note("c,eb,g")
+  .struct("x ~ x ~ ~ x ~ x ~ ~ ~ x ~ x ~ ~")
+  .slow(2)`
+
+- mask
+
+`note("c [eb,g] d [eb,g]").mask("<1 [0 1]>")`
+
+- palindrome
+
+`note("c d e g").palindrome()`
+
+## sophisticated rhythms
+
+- linger
+
+`s("lt ht mt cp, [hh oh]*2").linger("<1 .5 .25 .125>")`
+	
+### what are euclidean rhythms?
+-- poly meter? poly rhythm?...euclidean rhythm?
+-- https://www.youtube.com/watch?v=bKazVnHh2w4 (@1:55)
+
+- euclid
+
+`note("c3").euclid(3,8)`
+
 ## Research Presentation Due Next Week!
 **Research Presentation**
 - 7 min. presentation on a SPECIFIC livecoding topic of your choice (with instructor preapproval!!!)
