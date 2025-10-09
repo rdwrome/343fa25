@@ -3,7 +3,7 @@
 - [BlackHole](https://existential.audio/blackhole/)
   - uncomplicated, unpowerful
   - Download 16ch
-- JACK
+- [JACK](https://jackaudio.org/)
   - complicated, powerful
 
 ## miniTidalStrudel Audio > BlackHole > DAW or OBS
@@ -12,9 +12,8 @@
   - [(Create Multi-Output Device)](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device)
   - Input: BlackHole 16ch
   - Output: Multi-Output Device
-    - BlackHole 16ch Use box checked!
     - Your MONITOR source (external headphones, etc.) Use box checked!
-- **miniTidalStrudel**
+- **miniTidalStrudel IN CHROME**
   - Settings
   - Audio Output Device
   - Select: BlackHole 16ch
@@ -29,10 +28,42 @@
 ## [obs 101](https://obsproject.com/)
 - scenes
 - sources
+	- macOS screen capture
+	- create new
+	- method
+	- display
+	- rightclick>transform
 - "audio"
+	- OBS Studio>Preferences
+		- Global Audio Device: Desktop Audio: BlackHold 16ch
+		- Advanced: Monitoring Device: Your MONITOR source
+	- Audio Mixer>"cog" icon
+		- Monitor and Output
 - streaming vs studio
 
 ## [estuary](https://estuary.mcmaster.ca/)
+
+## minitidal cheatsheet
+
+`s` = sound
+
+`" "` = what to fit inside one cycle
+
+`~` = silence
+
+`!` = repeat
+
+`[]` = what to fit inside one pulse within one cycle
+
+`,` = layer these atop one another within one cycle
+
+'/' = play once per cycle specified as integer in the denominator
+
+`[ | ]` = randomly choose from this array per cycle
+
+`< >` = chose the next one from this list per cycle
+
+`?` = randomly silence
 
 ### mini-tidal notation comparison
 ```
@@ -61,7 +92,7 @@ stack(
 ).s()
 
 ```
-## sample transformations
+## minitidal in strudel sample transformations
 
 - loop at
 
@@ -73,7 +104,7 @@ s("rhodes").loopAt(2)`
 `samples({ rave: 'rave/AREUREADY.wav' }, 'github:tidalcycles/dirt-samples')
 s("rave").begin("<0 .25 .5 .75>").fast(2)`
 
-## sophisticated pattern transformations
+## sophisticated strudel pattern transformations
 
 - degradeBy
 
