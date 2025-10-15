@@ -17,7 +17,6 @@
 	- src
 	- out
 
-	
 ## geometry
 	- rotate
 	- scale
@@ -29,6 +28,14 @@
 	- scroll
 	- scrollX
 	- scrollY
+	
+# [advanced tutorial](https://hydra-book.glitches.me/#/)
+
+# [Examples](https://hydra.ojack.xyz)
+- roll through examples
+- change parameters
+- show and tell
+- code reuse!
 	
 ## color
 	- color
@@ -95,14 +102,6 @@
 	- height
 	- time
 	- mouse
-	
-# [advanced tutorial](https://hydra-book.glitches.me/#/)
-
-# [Examples](https://hydra.ojack.xyz)
-- roll through examples
-- change parameters
-- show and tell
-- code reuse!
 
 # [minitidal + hydra in strudel](https://strudel.cc/learn/hydra/)
 
