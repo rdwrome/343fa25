@@ -6,6 +6,7 @@ LMSC-261 & MTEC-111 are prerequisites.
 - minitidal in Strudel
 - hydra in Strudel
 - p5.live
+- November 6: Guest [Alexandra Cárdenas](https://alexandracardenas.com/)
 - from scratch techniques
 - solo av techniques
 

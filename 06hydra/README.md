@@ -6,13 +6,15 @@
 # [functions](https://hydra.ojack.xyz/functions)
 
 ## sources
-	- noise
-	- voronoi
 	- osc
-	- shape
-	- gradient
-	- src
+	- noise
 	- solid
+	- shape
+	- [voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram)
+	- [gradient](https://en.wikipedia.org/wiki/Gradient)
+	- src
+	- out
+
 	
 ## geometry
 	- rotate
@@ -27,12 +29,12 @@
 	- scrollY
 	
 ## color
-	- posterize
-	- shift
+	- [posterize](https://en.wikipedia.org/wiki/Posterization)
+	- [shift](https://en.wikipedia.org/wiki/Visible_light_communication#Color_Shift_Keying)
 	- invert
 	- contrast
-	- brightness
-	- luma
+	- [brightness](https://en.wikipedia.org/wiki/Brightness)
+	- [luma](https://en.wikipedia.org/wiki/Luma_(video))
 	- thresh
 	- color
 	- saturate
