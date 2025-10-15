@@ -4,6 +4,8 @@
 
 # [video synth basics](https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/)
 # [functions](https://hydra.ojack.xyz/functions)
+- parameters/arguments
+- chained functions like minitidal in strudel
 
 ## sources
 	- osc
@@ -29,19 +31,23 @@
 	- scrollY
 	
 ## color
-	- [posterize](https://en.wikipedia.org/wiki/Posterization)
-	- [shift](https://en.wikipedia.org/wiki/Visible_light_communication#Color_Shift_Keying)
+	- color
+		- r,g,b,a
+	- saturate
+		- how intense color is
+	- hue
+		- base color
+	- colorama
+		- remaps greyscale to colorscale
 	- invert
 	- contrast
+	- [posterize](https://en.wikipedia.org/wiki/Posterization)
+	- [shift](https://en.wikipedia.org/wiki/Visible_light_communication#Color_Shift_Keying)
 	- [brightness](https://en.wikipedia.org/wiki/Brightness)
 	- [luma](https://en.wikipedia.org/wiki/Luma_(video))
+		- cuts off pixels with intensity less than the threshold parameter
 	- thresh
-	- color
-	- saturate
-	- hue
-	- colorama
-	- sum
-	- rgba
+		- luma but 'color of the bright part of the image is preserved'
 
 ## eternal sources
 	- initCam
@@ -58,15 +64,20 @@
 	- blend
 	- mult
 	- diff
+	- mask
+		- like a stencil
+		```javascript
+		osc(10,0,1).hue(0.5).layer(osc(10,0,1).mask(shape(4,0.5,0.001))).out()
+		```
 	
 ## modulate
+	- modulate
 	- modulateRepeat
 	- modulateRepeatX
 	- modulateRepeatY
 	- modulateKaleid
 	- modulateScrollX
 	- modulateScrollY
-	- modulate
 	- modulateScale
 	- modulatePixelate
 	- modulateRotate
@@ -84,6 +95,8 @@
 	- height
 	- time
 	- mouse
+	
+# [advanced tutorial](https://hydra-book.glitches.me/#/)
 
 # [Examples](https://hydra.ojack.xyz)
 - roll through examples
