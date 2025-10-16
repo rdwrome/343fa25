@@ -1,21 +1,41 @@
 ### Accessibility
-- Let your musicians see the screen
 - Don't give someone a seizure
+- Let your musicians see the screen
 
 # [video synth basics](https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/)
+
 # [functions](https://hydra.ojack.xyz/functions)
-- parameters/arguments
+- arguments
 - chained functions like minitidal in strudel
 
 ## sources
 	- osc
-	- noise
-	- solid
+	- solid ([alpha](https://en.wikipedia.org/wiki/Alpha_compositing))
 	- shape
+	- [noise](https://en.wikipedia.org/wiki/Perlin_noise)
 	- [voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram)
 	- [gradient](https://en.wikipedia.org/wiki/Gradient)
 	- src
 	- out
+
+# [Examples](https://hydra.ojack.xyz)
+- roll through examples
+- change parameters
+- show and tell
+- code reuse!
+
+## synth settings
+	- render
+	- update
+	- setResolution
+	- hush
+	- setFunction
+	- speed
+	- bpm
+	- width
+	- height
+	- time
+	- mouse
 
 ## geometry
 	- rotate
@@ -28,15 +48,7 @@
 	- scroll
 	- scrollX
 	- scrollY
-	
-# [advanced tutorial](https://hydra-book.glitches.me/#/)
-
-# [Examples](https://hydra.ojack.xyz)
-- roll through examples
-- change parameters
-- show and tell
-- code reuse!
-	
+		
 ## color
 	- color
 		- r,g,b,a
@@ -89,19 +101,8 @@
 	- modulatePixelate
 	- modulateRotate
 	- modulateHue
-	
-## synth settings
-	- render
-	- update
-	- setResolution
-	- hush
-	- setFunction
-	- speed
-	- bpm
-	- width
-	- height
-	- time
-	- mouse
+
+# [advanced tutorial](https://hydra-book.glitches.me/#/)
 
 # [minitidal + hydra in strudel](https://strudel.cc/learn/hydra/)
 
