@@ -1,4 +1,4 @@
-# p5.live
+# [p5.live](https://teddavis.org/p5live/?cc=z212z)
 - remember p5.js?
 
 ### shortcuts
@@ -39,4 +39,4 @@ CTRL + SHIFT + DELETE	delete current sketch
 ## assignment
 - working with 1 or 2 others, create a 2 min live 'cocoded' p5.live performance
 - chose sound to play while you're doing it
-- Documentation file due at 11am
+- documentation file due at 11am
